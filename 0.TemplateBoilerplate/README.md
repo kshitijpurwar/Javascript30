@@ -52,9 +52,9 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
 - __ gulp production__ : Updates the Production version `index.html` from  `index.html` in `/build/dist` folder
 
 ## TODO
-- Documentation
-- Publishing to Github
-- Online with Github Sites
+- ~~Documentation~~
+- ~~Publishing to Github~~
+- ~~Online with Github Sites~~
 
 
 ## Template Structure
