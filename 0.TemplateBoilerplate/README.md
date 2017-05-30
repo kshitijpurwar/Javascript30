@@ -43,12 +43,12 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
 
 
 ## Gulp tasks
-- __3 main process are__
- - gulp pug
- - gulp sass
- - gulp babel
+- __3 main process are__ :
+   - gulp pug
+   - gulp sass
+   - gulp babel
 - __gulp serve__ : Serves the dist `index.html` on localhost, with live reload
-- __gulp nuke__ : Runs babel, sass and pug, then reloads the browser
+- __gulp nuke__ : Runs babel, sass and pug in async, then reloads the browser
 - __ gulp production__ : Updates the Production version `index.html` from  `index.html` in `/build/dist` folder
 
 ## TODO
