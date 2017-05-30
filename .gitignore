@@ -1,0 +1,4 @@
+**/node_modules
+
+In your the root directory of your app and simply write
+**/.DS_Store

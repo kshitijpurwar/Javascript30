@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis')
+
+$bodyBackColor: #e5e5e5
+$bodyTextColor: #000
+$linkColor: green
+
+=flexCenter
+  display: flex
+  align-items: center
+  justify-content: center
+
+*
+  box-sizing: border-box
+  font-family: 'Dosis', sans-serif
+  padding: 0
+  margin: 0
+
+a
+  cursor: pointer
+  text-decoration: none
+  color: $linkColor
+
+h2, h3
+  margin: 30px auto
+  opacity: 0.7
+  line-height: 1.8
+
+body
+  +flexCenter
+  height: 100vh
+  background-color: $bodyBackColor
+  text-align: center
+  color: $bodyTextColor
+
+
+.wrapper
+  padding: 4em 2em
+  transition: all 0.2s ease-in-out
+  background: lighten($bodyBackColor,5%)
+  max-width: 960px
+  border-radius: 3px
+  +flexCenter
+  flex-direction: column
+  &:hover
+    border-radius: 7px
+    background: lighten($bodyBackColor,2%)
+    transform: translateY(-5px) scale(1.01)
+    box-shadow: 0px 4px 10px 0px rgba(50,50,50,0.5)
+
+
+
+@media screen and (max-width: 720px)
+  html
+    font-size: 14px
+  .wrapper
+    max-width: 360px
+    padding: 3em 1em
