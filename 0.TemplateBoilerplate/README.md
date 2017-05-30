@@ -14,10 +14,10 @@ Used this [Scotch.io course](https://scotch.io/courses/using-gulp-as-a-build-sys
 - `Source code` will be available on github
 - Each project has a `code` associated with it to, be used with my personal URL shortener
 - The project will be hosted on Github sites
-- The `gulpfile.js` contains all the processes used such as minification, Live Reload,auto-prefixing, compilation etc
+- The `gulpfile.js` contains all the processes used such as minification, Live Reload, auto-prefixing,  compilation etc
 - This boilerplate has [browserSync](https://browsersync.io/) which is insanely AWESOME :tada: :tada: :tada: :balloon:.
 All you need to do is edit the Sass, Pug and JS in `/build/src/`
-- Use `gulp production` to update __Production__ `index.html` in root folder
+- Use `gulp production` to update __Production__ `index.html` in root folder before pushing to github
 - Use `index.html` in `/build/dist` for testing, it's the one with live reload
 
 ## Gulp Plugins employed
@@ -38,7 +38,7 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
     - Source mapped
     - Auto prefixed
     - Minified    
-5 `scripts.js` are transpiled to browser-compatible JavaScript with `Babel`   
+5. `scripts.js` are transpiled to browser-compatible JavaScript with `Babel`   
 6. Styles and scripts from `dist` is inlined into index.html, it's uglified and written to `root` folder.  
 
 
@@ -49,12 +49,13 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
    - gulp babel
 - __gulp serve__ : Serves the dist `index.html` on localhost, with live reload
 - __gulp nuke__ : Runs babel, sass and pug in async, then reloads the browser
-- __ gulp production__ : Updates the Production version `index.html` from  `index.html` in `/build/dist` folder
+- __gulp production__ : Updates the Production version `index.html` from  `index.html` in `/build/dist` folder
 
 ## TODO
 - ~~Documentation~~
 - ~~Publishing to Github~~
 - ~~Online with Github Sites~~
+- Change subdomain to labs i.e. `labs.kshitijpurwar.com`
 
 
 ## Template Structure
