@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE-edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Javascript DrumKit
+		link(rel="stylesheet", href="./build/dist/styles.css",inline)
+	body(style="background-image: url('./assets/drumsBackground.jpg')") 
+		.overlay
+		.keys
+			.key(data-key="65")
+				kbd A
+				span.sound Clap	
+			.key(data-key="83")
+				kbd S
+				span.sound Crash	
+			.key(data-key="68")
+				kbd D
+				span.sound Kick
+			.key(data-key="70")
+				kbd F
+				span.sound Kick 2	
+			.key(data-key="71")
+				kbd G
+				span.sound Open Hat	
+			.key(data-key="72")
+				kbd H
+				span.sound Perc
+			.key(data-key="74")
+				kbd J
+				span.sound Ride
+			.key(data-key="75")
+				kbd K
+				span.sound Snare	
+			.key(data-key="76")
+				kbd L
+				span.sound Snare 2
+		p: em Use headphones for the best experience
+
+		audio(data-key="65",src="./assets/Clap.wav")
+		audio(data-key="83",src="./assets/Crash.wav")
+		audio(data-key="68",src="./assets/Kick1.wav")
+		audio(data-key="70",src="./assets/Kick2.wav")
+		audio(data-key="71",src="./assets/OpenHat.wav")
+		audio(data-key="72",src="./assets/Perc.wav")
+		audio(data-key="74",src="./assets/Ride.wav")
+		audio(data-key="75",src="./assets/Snare1.wav")
+		audio(data-key="76",src="./assets/Snare2.wav")
+		h3 
+			| Developed by 
+			a(href="https://kshitijpurwar.com",target="_blank") Kshitij Purwar
+		script(src="./build/dist/scripts.js", inline)
