@@ -47,10 +47,11 @@ body
   background-size: cover
   position: relative
   flex-direction: column
+  overflow: hidden
 
 .overlay
-  height: 100%
-  width: 100%
+  height: 100vh
+  width: 100vw
   background-color: rgba(0, 0, 0, 0.85)
   position: absolute
   z-index: -1
@@ -62,6 +63,8 @@ body
   width: 100%
   display: flex
   justify-content: space-around
+  flex-wrap: wrap
+
 
 .key
   width: 110px
@@ -97,3 +100,6 @@ body
 @media screen and (max-width: 720px)
   html
     font-size: 14px
+  .key
+    width: 90px
+    height: 90px
