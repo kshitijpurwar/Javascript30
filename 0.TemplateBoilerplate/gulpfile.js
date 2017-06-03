@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var rename = require("gulp-rename");
+
 
 // Sass to CSS, autoprefixing, sourcemaps and minification
 var sass = require('gulp-sass'),
@@ -49,12 +51,14 @@ gulp.task('pug',function(){
 
   return gulp.src(['./build/src/index.pug'])
 
+  .pipe(rename('./test.pug'))
+
   // Pug to HTML
   .pipe(pug({ pretty: true }).on('error',function(err) {
     console.log(err)
   }))
 
-  .pipe(gulp.dest('./build/dist'));
+  .pipe(gulp.dest('./'));
 
 })
 
@@ -91,7 +95,8 @@ gulp.task('serve',function() {
 
   browserSync.init({
     server:{
-      baseDir:'./build/dist'
+      baseDir:'./',
+      directory: true
     }
   });
 
@@ -103,7 +108,9 @@ gulp.task('serve',function() {
 // Run production before commiting to github
 gulp.task('production', function(){
 
-  return gulp.src('./build/dist/index.html')
+  return gulp.src('./test.html')
+
+  .pipe(rename('./index.html'))
 
   .pipe(inline({ compress: true }))
 
