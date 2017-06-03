@@ -18,7 +18,7 @@ Used this [Scotch.io course](https://scotch.io/courses/using-gulp-as-a-build-sys
 - This boilerplate has [browserSync](https://browsersync.io/) which is insanely AWESOME :tada: :tada: :tada: :balloon:.
 All you need to do is edit the Sass, Pug and JS in `/build/src/`
 - Use `gulp production` to update __Production__ `index.html` in root folder before pushing to github
-- Use `index.html` in `/build/dist` for testing, it's the one with live reload
+- Use `test.html` in `root` for testing, it's the one with live reload
 
 ## Gulp Plugins employed
 - [Sass Compiler](https://www.npmjs.com/package/gulp-sass)
@@ -26,6 +26,7 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
 - [Babel](https://babeljs.io/)
 - [CSS Minifier](https://www.npmjs.com/package/gulp-cssmin)
 - [HTML Minifier](https://www.npmjs.com/package/gulp-htmlmin/)
+- [gulp--rename](https://www.npmjs.com/package/gulp-rename)
 - [Inliner](https://www.npmjs.com/package/gulp-inline-source)
 - [Auto prefixer](https://www.npmjs.com/package/gulp-autoprefixer/)
 - [Source Maps](https://www.npmjs.com/package/gulp-sourcemaps/) -- [Source Maps 101??](https://youtu.be/_snS5czNJ0I)
@@ -33,7 +34,7 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
 
 ## The process
 1. Edit the `index.pug` or `styles.sass` in `src` folder
-3. `index.pug` is compiled to `index.html` in `dist`
+3. `index.pug` is compiled to `test.html` in `root` folder
 4. `styles.sass` is compiled to `styles.css` in `dist`,  is
     - Source mapped
     - Auto prefixed
@@ -49,7 +50,7 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
    - gulp babel
 - __gulp serve__ : Serves the dist `index.html` on localhost, with live reload
 - __gulp nuke__ : Runs babel, sass and pug in async, then reloads the browser
-- __gulp production__ : Updates the Production version `index.html` from  `index.html` in `/build/dist` folder
+- __gulp production__ : Updates the Production version `index.html` from  `test.html` in the same `root` folder
 
 ## TODO
 - ~~Documentation~~
@@ -59,19 +60,19 @@ All you need to do is edit the Sass, Pug and JS in `/build/src/`
 
 
 ## Template Structure
-- Build
+- build
   - dist - __Not to be touched__
-    - `index.html`
     - `styles.css`
     - `scripts.js`
   - src  - __To be edited__
     - `index.pug`
     - `scripts.js`
     - `styles.sass`
-  - assets  - contains images and other media
+- assets  - contains images and other media
 - README.md - contains the information about the project
 - screenshot.png - screenshot of the current project
 - `gulpfile.js`
+- `test.html` - HTML Product after pug compilation
 - `index.html` - Main production file to be deployed
 - `package.json`
 
