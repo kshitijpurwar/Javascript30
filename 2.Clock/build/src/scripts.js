@@ -23,7 +23,6 @@ window.onload = function() {
   const hourDigital = document.querySelector('.hour');
 
   //  Set the digital Clock
-
   function SetDigital(seconds, minutes, hours) {
 
     secDigital.innerHTML = padIt(seconds);
@@ -34,16 +33,14 @@ window.onload = function() {
 
   function setTime(){
 
-
-    // Gets the numbers
+    // Gets the time figures
     const now = new Date();
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
     const hours = now.getHours();
 
-    // Set Digital Clock
+    // Update the Digital Clock
     SetDigital( seconds, minutes, hours)
-
 
     // Calculates the degrees corresponding to numbers
     const secDegrees = (seconds/60)*360 + 90;
@@ -55,8 +52,6 @@ window.onload = function() {
     secondHand.style.transform = `rotate(${secDegrees}deg)`;
     minuteHand.style.transform = `rotate(${minDegrees}deg)`;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-
-
 
   }
 
