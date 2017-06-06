@@ -17,21 +17,29 @@ window.onload = function() {
   resetButton.addEventListener('click', reset);
 
 
-
   function updateHandler() {
-    if(this.dataset.sizing == "px"){
-      document.documentElement.style.setProperty("--blur", this.value + "px")
+    switch (this.name) {
+      case "blur":
+         document.documentElement.style.setProperty("--blur", this.value + "px");
+         break;
+
+      case "hue":
+        document.documentElement.style.setProperty(`--hue`, this.value + "deg");
+        break;
+
+      case "invert":
+      case "sepia":
+      case "gray":
+        document.documentElement.style.setProperty(`--${this.name}`, this.value/100);
+        break;
+
+      case "borderColor":
+        document.documentElement.style.setProperty("--borderColor", this.value)
+        break;
+
+      default:
+        return 0;
     }
-    else if(this.dataset.scale == "1"){
-      document.documentElement.style.setProperty(`--${this.name}`, this.value/100)
-    }
-    else if(this.name == "borderColor"){
-      document.documentElement.style.setProperty("--borderColor", this.value)
-    }
-    else if(this.name == "hue"){
-      document.documentElement.style.setProperty(`--hue`, this.value + "deg")
-    }
-    console.log(this.value,this.dataset);
   }
 
   inputs.forEach(function(input){
