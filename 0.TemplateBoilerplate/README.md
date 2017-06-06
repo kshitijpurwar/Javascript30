@@ -1,4 +1,4 @@
-# Javascript 30 day boilerplate ( _boil_ )
+# Javascript 30 day boilerplate ( _boil_ ) [Demo](https://www.kshitijpurwar.com/0.TemplateBoilerplate/)
 ---
 
 Based on a [Javascript 30 course](https://javascript30.com/)  by [Wes Bos](https://wesbos.com) in which you build 30 micro projects with only `vanilla JS`, no jQuery and :poop:.

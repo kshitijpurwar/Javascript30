@@ -1,27 +1,38 @@
-# 1. Javascript DrumKit ( _drum_ )
+# 1. Javascript DrumKit ( _drum_ ) [Demo](https://www.kshitijpurwar.com/1.JavascriptDrumKit/)
 ---
 
-Based on a [Javascript 30 course](https://javascript30.com/)  by [Wes Bos](https://wesbos.com) in which you build 30 micro projects with only `vanilla JS`, no jQuery and :poop:.
+This is a javascript Drumkit, just hit the keys and play the sound. There is a subtle effect on pressing keys which is powered by `transitionend` event not using `setTimeout` to remove the class.
 
-Also _Wes Bos_ is an amazing teacher!! :thumbsup:
 
-Used this [Scotch.io course](https://scotch.io/courses/using-gulp-as-a-build-system) to learn gulp and make this awesome template. Try [browserSync](https://browsersync.io/docs/gulp), you are gonna fall in :heart_eyes: love with it !!
-
-## What I learned
+## What I learnt
 - `transitionend` event instead of setTimeout
 - => function is ES6 without explicit return and `function` keyword
 - key code and related JS events
-- Using audio with JS
+- Using audio with JS ( `play`, `currentTime`)
 
+Original Function
+```
+keys.forEach(function(key) {
+  key.addEventListener('transitionend', removeEffect))
+}
+```
 
-## TODO
-- Documentation
-- Restructure boilerplate files and folder
-- Make amends to boilerplate gulp file
-- ~~Publishing to Github~~
-- ~~Online with Github Sites~~
-- Change subdomain to labs i.e. `labs.kshitijpurwar.com`
-
-
+Let remove the function keyword
+```
+keys.forEach((key) {
+  key.addEventListener('transitionend', removeEffect))
+}  
+```
+Let remove the parenthesis around key as there is only 1
+arguement
+```
+keys.forEach(key {
+  key.addEventListener('transitionend', removeEffect))
+}
+```
+Remove the curly braces and add an arrow
+```
+keys.forEach(key => key.addEventListener('transitionend', removeEffect))
+```
 ---
-:wrench: :nut_and_bolt: Created by  __[Kshitij Purwar](https://kshitijpurwar.com)__ with :heart:
+:wrench: :nut_and_bolt: Created by  __[Kshitij Purwar](https://kshitijpurwar.com)__
