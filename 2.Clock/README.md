@@ -1,5 +1,5 @@
-# Clock ( _tick_ ) [Demo](https://www.kshitijpurwar.com/2.Clock/)
----
+# Clock ( _tick_ )
+###[Demo](https://www.kshitijpurwar.com/2.Clock/)
 
 This is a very simple clock, it also has a _digital_ display.
 
