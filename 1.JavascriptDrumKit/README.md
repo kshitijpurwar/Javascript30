@@ -1,4 +1,5 @@
-# 1. Javascript DrumKit ( _drum_ ) [Demo](https://www.kshitijpurwar.com/1.JavascriptDrumKit/)
+# 1. Javascript DrumKit ( _drum_ )
+### [Demo](https://www.kshitijpurwar.com/1.JavascriptDrumKit/)
 ---
 
 This is a javascript Drumkit, just hit the keys and play the sound. There is a subtle effect on pressing keys which is powered by `transitionend` event not using `setTimeout` to remove the class.
