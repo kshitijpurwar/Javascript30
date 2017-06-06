@@ -84,7 +84,7 @@ gulp.task('babel',function(cb) {
 
 // All 3 css, pug and js happen async, keep this in mind
 // Nuke performs all the tasks and reloads the browser
-gulp.task('nuke', ['pug','sass','babel'], function(done) {
+gulp.task('nuke', ['pug','sass','babel','production'], function(done) {
   browserSync.reload();
   done();
 });
