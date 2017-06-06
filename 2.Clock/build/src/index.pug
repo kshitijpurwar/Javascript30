@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE-edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Clock
+		link(rel="stylesheet", href="./build/dist/styles.css",inline)
+	body(style="background-image: url('./assets/clockBackground.jpg')")   
+		.wrapper
+			.outerClock
+				.innerClock
+					.hourHand
+					.minuteHand
+					.secondHand
+					.center1
+					.center2
+					.digital
+						span.hour  10			
+						span.divider :
+						span.min  23 
+						span.divider :
+						span.sec 30 
+
+		h3
+			| Developed by 
+			a(href="https://kshitijpurwar.com",target="_blank") Kshitij Purwar
+
+		script(src="./build/dist/scripts.js",inline)

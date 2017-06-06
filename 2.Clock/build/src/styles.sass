@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700')
+
+$bodyBackColor: #e5e5e5
+$bodyTextColor: #000
+$linkColor: #0a1c40
+
+=flexCenter
+  display: flex
+  align-items: center
+  justify-content: center
+
+*
+  box-sizing: border-box
+  font-family: sans-serif
+  padding: 0
+  margin: 0
+  font-family: 'Inconsolata', monospace
+
+a
+  cursor: pointer
+  text-decoration: none
+  color: $linkColor
+
+h3
+  position: absolute
+  bottom: 0px
+  margin: 10px auto
+  opacity: 0.7
+  line-height: 1.8
+html
+  height: 100%
+
+body
+  +flexCenter
+  flex-direction: column
+  justify-content: space-around
+  height: 100%
+  background-color: $bodyBackColor
+  text-align: center
+  color: $bodyTextColor
+  position: relative
+  background-repeat: no-repeat
+  background-size: cover
+
+.wrapper
+  padding: 10px
+  background: #eee
+  border-radius: 50%
+  box-shadow: 0 0 20px 4px rgba(53, 53, 53, 0.35)
+
+
+
+.outerClock
+  width: 270px
+  height: 270px
+  background: #eee
+  border-radius: 50%
+  position: relative
+  padding: 25px
+  border: 2px dashed #000
+
+
+
+.innerClock
+  width: 100%
+  height: 100%
+  background: #eee
+  border-radius: 50%
+  position: relative
+  transform: translateY(-2px)
+
+
+.minuteHand,.hourHand, .secondHand
+  width: 50%
+  height: 2px
+  background-color: #000
+  position: absolute
+  top: 50%
+  transform-origin: 100%
+  transition: all .05s cubic-bezier(0, 1.32, 0.45, 0.9)
+  transform: rotate(90deg)
+  z-index: 4
+
+
+.center1
+  width: 30px
+  height: 30px
+  display: block
+  background: #888
+  transform: translate(-50%,-50%)
+  border-radius: 50%
+  position: absolute
+  z-index: 3
+  top: 50%
+  left: 50%
+
+.center2
+  width: 20px
+  height: 20px
+  display: block
+  background: #fff
+  transform: translate(-50%,-50%)
+  border-radius: 50%
+  position: absolute
+  z-index: 4
+  top: 50%
+  left: 50%
+
+.digital
+  position: absolute
+  top: 80%
+  left: 50%
+  transform: translate(-50%,0%)
+  // background: #fff
+  padding: 10px
+  display: flex
+  align-items: flex-end
+  letter-spacing: 2px
+  font-weight: bold
+  font-size: 1rem
+  // border: 2px solid #000
+  span.divider
+    margin: 0 2px
+    font-weight: bold
