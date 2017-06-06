@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playing with CSS variables and JS</title>
+    <style>
+      :root{
+      	--borderColor: #444444;
+      	--blur: 0px;
+      	--sepia: 0;
+      	--gray: 0;
+      	--invert: 0;
+      	--hue: 0deg;		
+      	}
+      img.modified{
+      	border: 6px solid var(--borderColor);
+      	filter: blur(var(--blur)) sepia(var(--sepia)) invert(var(--invert)) grayscale(var(--gray)) hue-rotate(var(--hue))
+      }	
+    </style>
+    <link rel="stylesheet" href="./build/dist/styles.css" inline>
+  </head>
+  <body>   
+    <h1>Playing with CSS variables and image filters with Javascript<br></h1>
+    <p>Don't bother with this demo if your browser doesn't support CSS variables, or you are on a mobile device, won't be fun!</p>
+    <div class="wrapper">
+      <div class="image"><img class="original" src="./assets/sample.jpg">
+        <h2>Original Image</h2>
+      </div>
+      <div class="controls">
+        <div class="control">
+          <label for="color">Border Color</label>
+          <input type="color" id="colorsepia" name="borderColor" value="#444444">
+        </div>
+        <div class="control">
+          <label for="blur">Blur</label>
+          <input class="blur" type="range" id="blur" name="blur" min="0" max="10" data-sizing="px" value="0">
+        </div>
+        <div class="control">
+          <label for="sepia">Sepia</label>
+          <input type="range" id="sepia" name="sepia" min="0" max="100" data-scale="1" value="0">
+        </div>
+        <div class="control">
+          <label for="gray">Grayscale</label>
+          <input type="range" id="gray" name="gray" min="0" max="100" data-scale="1" value="0">
+        </div>
+        <div class="control">
+          <label for="invert">Invert</label>
+          <input type="range" id="invert" name="invert" min="0" max="100" data-scale="1" value="0">
+        </div>
+        <div class="control">
+          <label for="hue">Hue Rotate</label>
+          <input class="hue" type="range" id="hue" name="hue" min="0" max="360" value="0">
+        </div>
+        <button class="reset">Reset	</button>
+      </div>
+      <div class="image"><img class="modified" src="./assets/sample.jpg">
+        <h2>Modified Image			</h2>
+      </div>
+    </div>
+    <hr>
+    <p>
+       Developed by <a href="https://kshitijpurwar.com" target="_blank">Kshitij Purwar</a></p>
+    <script src="./build/dist/scripts.js" inline></script>
+  </body>
+</html>
