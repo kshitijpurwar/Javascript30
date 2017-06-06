@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE-edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Playing with CSS variables and JS
+
+		style.
+			:root{
+				--borderColor: #444444;
+				--blur: 0px;
+				--sepia: 0;
+				--gray: 0;
+				--invert: 0;
+				--hue: 0deg;		
+				}
+			img.modified{
+				border: 6px solid var(--borderColor);
+				filter: blur(var(--blur)) sepia(var(--sepia)) invert(var(--invert)) grayscale(var(--gray)) hue-rotate(var(--hue))
+			}	
+		link(rel="stylesheet", href="./build/dist/styles.css",inline)
+	body    
+		h1
+			| Playing with CSS variables and image filters with Javascript
+			br
+		p Don't bother with this demo if your browser doesn't support CSS variables, or you are on a mobile device, won't be fun!
+		.wrapper
+			.image
+				img(src="./assets/sample.jpg").original
+				h2 Original Image
+			.controls
+				.control
+					label(for="color") Border Color
+					input(type="color",id="colorsepia",name="borderColor",value="#444444")
+				.control
+					label(for="blur") Blur
+					input(type="range",id="blur",name="blue",min="0",max="10",data-sizing="px",value="0").blur
+				.control
+					label(for="sepia") Sepia
+					input(type="range",id="sepia",name="sepia",min="0",max="100",data-scale="1",value="0")
+				.control
+					label(for="gray") Grayscale
+					input(type="range",id="gray",name="gray",min="0",max="100",data-scale="1",value="0")
+				.control
+					label(for="invert") Invert
+					input(type="range",id="invert",name="invert",min="0",max="100",data-scale="1",value="0")
+				.control
+					label(for="hue") Hue Rotate
+					input(type="range",id="hue",name="hue",min="0",max="360",value="0").hue
+				button.reset Reset	
+			.image
+				img(src="./assets/sample.jpg").modified
+				h2 Modified Image			
+		hr
+		p 
+			| Developed by 
+			a(href="https://kshitijpurwar.com",target="_blank") Kshitij Purwar
+		script(src="./build/dist/scripts.js",inline)
