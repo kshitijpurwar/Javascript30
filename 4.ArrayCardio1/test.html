@@ -4,61 +4,106 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Playing with CSS variables and JS</title>
-    <style>
-      :root{
-      	--borderColor: #444444;
-      	--blur: 0px;
-      	--sepia: 0;
-      	--gray: 0;
-      	--invert: 0;
-      	--hue: 0deg;		
-      	}
-      img.modified{
-      	border: 6px solid var(--borderColor);
-      	filter: blur(var(--blur)) sepia(var(--sepia)) invert(var(--invert)) grayscale(var(--gray)) hue-rotate(var(--hue))
-      }	
-    </style>
+    <title>Array Cardio Excersize 1</title>
     <link rel="stylesheet" href="./build/dist/styles.css" inline>
   </head>
   <body>   
-    <h1>Playing with CSS variables and image filters with Javascript<br></h1>
-    <p>Don't bother with this demo if your browser doesn't support CSS variables, or you are on a mobile device, won't be fun!</p>
-    <div class="wrapper">
-      <div class="image"><img class="original" src="./assets/sample.jpg">
-        <h2>Original Image</h2>
-      </div>
-      <div class="controls">
-        <div class="control">
-          <label for="color">Border Color</label>
-          <input type="color" id="colorsepia" name="borderColor" value="#444444">
-        </div>
-        <div class="control">
-          <label for="blur">Blur</label>
-          <input class="blur" type="range" id="blur" name="blur" min="0" max="10" data-sizing="px" value="0">
-        </div>
-        <div class="control">
-          <label for="sepia">Sepia</label>
-          <input type="range" id="sepia" name="sepia" min="0" max="100" data-scale="1" value="0">
-        </div>
-        <div class="control">
-          <label for="gray">Grayscale</label>
-          <input type="range" id="gray" name="gray" min="0" max="100" data-scale="1" value="0">
-        </div>
-        <div class="control">
-          <label for="invert">Invert</label>
-          <input type="range" id="invert" name="invert" min="0" max="100" data-scale="1" value="0">
-        </div>
-        <div class="control">
-          <label for="hue">Hue Rotate</label>
-          <input class="hue" type="range" id="hue" name="hue" min="0" max="360" value="0">
-        </div>
-        <button class="reset">Reset	</button>
-      </div>
-      <div class="image"><img class="modified" src="./assets/sample.jpg">
-        <h2>Modified Image			</h2>
-      </div>
-    </div>
+    <h1>Array Cardio Exercise 1</h1>
+    <h2>All Inventors</h2>
+    <table id="completeData">
+      <thead>
+        <tr>
+          <th>S. No</th>
+          <th>First name</th>
+          <th>Lived for</th>
+          <th>Year</th>
+          <th>Passed	</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Kshitij Purwar</td>
+          <td>85</td>
+          <td>1995</td>
+          <td>2080</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>1. Inventors born in 1500's</h2>
+    <table id="bornIn1500s">
+      <thead>
+        <tr>
+          <th>S. No</th>
+          <th>First name</th>
+          <th>Lived for</th>
+          <th>Year</th>
+          <th>Passed	</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Kshitij Purwar</td>
+          <td>85</td>
+          <td>1995</td>
+          <td>2080</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>2. Inventors orderd by birth year</h2>
+    <table id="orderdBirth">
+      <thead>
+        <tr>
+          <th>S. No</th>
+          <th>First name</th>
+          <th>Lived for</th>
+          <th>Year</th>
+          <th>Passed	</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Kshitij Purwar</td>
+          <td>85</td>
+          <td>1995</td>
+          <td>2080</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>3. Inventors orderd by years lived</h2>
+    <table id="orderedLived">
+      <thead>
+        <tr>
+          <th>S. No</th>
+          <th>First name</th>
+          <th>Lived for</th>
+          <th>Year</th>
+          <th>Passed	</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Kshitij Purwar</td>
+          <td>85</td>
+          <td>1995</td>
+          <td>999</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>List of people </h2>
+    <p class="list" id="people">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+      
+    </p>
+    <h2>7. List of people Sorted by name</h2>
+    <p class="list" id="peopleSorted">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+    </p>
     <hr>
     <p>
        Developed by <a href="https://kshitijpurwar.com" target="_blank">Kshitij Purwar</a></p>

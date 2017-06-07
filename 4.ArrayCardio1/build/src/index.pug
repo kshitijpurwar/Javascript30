@@ -4,55 +4,91 @@ html(lang="en")
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible", content="IE-edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
-		title Playing with CSS variables and JS
-
-		style.
-			:root{
-				--borderColor: #444444;
-				--blur: 0px;
-				--sepia: 0;
-				--gray: 0;
-				--invert: 0;
-				--hue: 0deg;		
-				}
-			img.modified{
-				border: 6px solid var(--borderColor);
-				filter: blur(var(--blur)) sepia(var(--sepia)) invert(var(--invert)) grayscale(var(--gray)) hue-rotate(var(--hue))
-			}	
+		title Array Cardio Excersize 1
 		link(rel="stylesheet", href="./build/dist/styles.css",inline)
 	body    
-		h1
-			| Playing with CSS variables and image filters with Javascript
-			br
-		p Don't bother with this demo if your browser doesn't support CSS variables, or you are on a mobile device, won't be fun!
-		.wrapper
-			.image
-				img(src="./assets/sample.jpg").original
-				h2 Original Image
-			.controls
-				.control
-					label(for="color") Border Color
-					input(type="color",id="colorsepia",name="borderColor",value="#444444")
-				.control
-					label(for="blur") Blur
-					input(type="range",id="blur",name="blur",min="0",max="10",data-sizing="px",value="0").blur
-				.control
-					label(for="sepia") Sepia
-					input(type="range",id="sepia",name="sepia",min="0",max="100",data-scale="1",value="0")
-				.control
-					label(for="gray") Grayscale
-					input(type="range",id="gray",name="gray",min="0",max="100",data-scale="1",value="0")
-				.control
-					label(for="invert") Invert
-					input(type="range",id="invert",name="invert",min="0",max="100",data-scale="1",value="0")
-				.control
-					label(for="hue") Hue Rotate
-					input(type="range",id="hue",name="hue",min="0",max="360",value="0").hue
-				button.reset Reset	
-			.image
-				img(src="./assets/sample.jpg").modified
-				h2 Modified Image			
+		h1 Array Cardio Exercise 1
+
+		h2 All Inventors
+		table#completeData
+			thead
+				tr
+					th S. No
+					th First name
+					th Lived for
+					th Year
+					th Passed	
+			tbody
+				tr
+					td 1
+					td Kshitij Purwar
+					td 85
+					td 1995
+					td 2080
+
+		h2 1. Inventors born in 1500's
+		table#bornIn1500s
+			thead
+				tr
+					th S. No
+					th First name
+					th Lived for
+					th Year
+					th Passed	
+			tbody
+				tr
+					td 1
+					td Kshitij Purwar
+					td 85
+					td 1995
+					td 2080
+
+		h2 2. Inventors orderd by birth year
+		table#orderdBirth
+			thead
+				tr
+					th S. No
+					th First name
+					th Lived for
+					th Year
+					th Passed	
+			tbody
+				tr
+					td 1
+					td Kshitij Purwar
+					td 85
+					td 1995
+					td 2080
+
+
+		h2 3. Inventors orderd by years lived
+		table#orderedLived
+			thead
+				tr
+					th S. No
+					th First name
+					th Lived for
+					th Year
+					th Passed	
+			tbody
+				tr
+					td 1
+					td Kshitij Purwar
+					td 85
+					td 1995
+					td 999
+
+		h2 List of people 
+		p#people.list.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+		h2 7. List of people Sorted by name
+		p#peopleSorted.list.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 		hr
+
 		p 
 			| Developed by 
 			a(href="https://kshitijpurwar.com",target="_blank") Kshitij Purwar
