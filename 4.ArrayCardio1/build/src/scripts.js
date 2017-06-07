@@ -83,19 +83,6 @@ window.onload = function() {
   tableRender(orderedByLived, "orderedLived")
 
 
-  // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-  // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
-
-  // We get a nodeList querySelector, using spread (...) we convert it into a Array
-  // links = [...document.querySelectorAll('.mw-category a')];
-  //
-  // // Takes all the  links and gets out all the names
-  // const de = links
-  // .map( place => place.innerHTML )
-  // .filter(place => place.search(" de ") > 0 );
-  //
-  // console.log(de);
 
 
   // Filling the paragraph with data
@@ -147,31 +134,5 @@ console.log(transports);
 
 
 
-
-// IMDB top Indian movies yearwise
-// http://www.imdb.com/india/top-rated-indian-movies/
-
-// Fetches the spans containing the year
-// yearSpans = document.querySelectorAll('.secondaryInfo')
-//
-//
-// // Converts nodeList from of spans to array
-// y = [...yearSpans]
-//
-// // fetchs the year out of the span
-// years = y.map(year => year.innerHTML.substring(1,5))
-//
-//
-// // Reduces the years into a collection, takes in empty object,
-// // if key exists in object, it ++  else makes one and the  ++
-// const yearwise = years.reduce((obj,year)=> {
-//   if(!obj[year]){
-//     obj[year]=0
-//   }
-//   obj[year]++;
-//   return obj;
-// },{})
-//
-// console.log(yearwise)
 
 };
