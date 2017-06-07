@@ -13,40 +13,51 @@ const inventors = [
   { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
 ];
 
-
+// function to render the table of given data
 function tableRender(data, id){
   const tableBody = document.querySelector(`#${id} tbody`);
 
-  let dataRows = data.map((person,i) =>
-  `<tr>
-  <td> ${i+1}</td>
-  <td> ${person.first} ${person.last}</td>
-  <td> ${person.passed - person.year}</td>
-  <td> ${person.year}</td>
-  <td> ${person.passed}</td>
-  </tr>
-  `
-);
-tableBody.innerHTML = dataRows.join("");
+  let dataRows =
+    data.map((person,i) =>
+      `<tr>
+      <td> ${i+1}</td>
+      <td> ${person.first} ${person.last}</td>
+      <td> ${person.passed - person.year}</td>
+      <td> ${person.year}</td>
+      <td> ${person.passed}</td>
+      </tr>
+      `
+).join("");
+
+
+tableBody.innerHTML = dataRows;
+
 console.table(data)
+
 }
 
+// function to render the paragraph of given data
+
+function renderParagraph(data, paragraphID){
+    const Para = document.querySelector(`#${paragraphID}`);
+
+    const paragraph = data.map(p => p.split(',')
+                          .reverse()
+                          .join()
+                          .replace(','," ")).join(',');
+
+    Para.innerHTML = paragraph;
+}
 
 
 //  People Dataset
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
-
-
 window.onload = function() {
-
-
 
   // Fill the inventors Data in the table
 
   tableRender(inventors, "completeData")
-
-
 
   // Array.prototype.filter()
   // 1. Filter the list of inventors for those who were born in the 1500's
@@ -82,57 +93,14 @@ window.onload = function() {
 
   tableRender(orderedByLived, "orderedLived")
 
-
-
-
-  // Filling the paragraph with data
-  const peoplePara = document.querySelector('#people');
-
-  let paragraph = people.map(p => p.split(',').reverse().join().replace(','," ")).join(',')
-
-  peoplePara.innerHTML = paragraph;
+  // Fill the para with data
+  renderParagraph(people, "people");
 
   // 7. sort Exercise
   // Sort the people alphabetically by last name
-
-  const peopleSortedPara = document.querySelector('#peopleSorted');
-
   const sortedPeople = people.sort((lastOne, nextOne) =>
-  lastOne.split(', ')[1] > nextOne.split(', ')[1] ? 1 : -1
-);
+  lastOne.split(', ')[1] > nextOne.split(', ')[1] ? 1 : -1);
 
-
-//  Destructuring array into variables
-// const [last, first] = lastOne.split(', ');
-
-
-paragraph = sortedPeople.map(p => p.split(',').reverse().join().replace(','," ")).join(',')
-
-peopleSortedPara.innerHTML = paragraph;
-
-
-
-// Reduce starts with a blank object and the loops over the complete array
-
-// 8. Reduce Exercise
-// Sum up the instances of each of these
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
-const transports = data.reduce(function(obj, item) {
-
-  // Checks if the object has the current item key, if not makes on and defaults it to 0
-  if(!obj[item]) {
-    obj[item] = 0;
-  }
-  obj[item]++;
-  // console.log(obj,item);
-  return obj;
-},{})
-
-
-console.log(transports);
-
-
-
+renderParagraph(sortedPeople, "peopleSorted");
 
 };
